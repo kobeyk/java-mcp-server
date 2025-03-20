@@ -17,5 +17,6 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AlertsResponse {
-    private List<Map<String,String>> features;
+    public static final String PROPERTIES = "properties";
+    private List<Map<String,Object>> features;
 }

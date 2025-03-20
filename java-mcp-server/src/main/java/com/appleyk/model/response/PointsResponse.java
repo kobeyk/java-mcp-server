@@ -1,6 +1,5 @@
-package com.appleyk.model;
+package com.appleyk.model.response;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Map;
@@ -13,7 +12,8 @@ import java.util.Map;
  */
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class PointsResponse {
-    private Map<String,String> properties;
+    public final static String FORECAST = "forecast";
+    private String id;
+    private Map<String,Object> properties;
 }
