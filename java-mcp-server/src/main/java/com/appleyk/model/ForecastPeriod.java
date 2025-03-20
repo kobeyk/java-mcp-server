@@ -35,10 +35,10 @@ public class ForecastPeriod {
     public String toDesc(){
         List<String> result = new ArrayList<>();
         result.add(name == null ? "Unknown" : name + ":");
-        result.add("Temperature:" + (temperature == null ? "Unknown" : temperature) + "°" + (temperatureUnit == null ? "F" : temperatureUnit));
-        result.add("Wind:" + (windSpeed==null ? "UnKnown" : windSpeed) + " "+(windDirection == null ? "" : windDirection));
-        result.add(shortForecast ==null ? "No forecast available" : shortForecast);
-        result.add("---");
+        result.add("\nTemperature:" + (temperature == null ? "Unknown" : temperature) + "°" + (temperatureUnit == null ? "F" : temperatureUnit));
+        result.add("\nWind:" + (windSpeed==null ? "UnKnown" : windSpeed) + " "+(windDirection == null ? "" : windDirection));
+        result.add("\n"+(shortForecast ==null ? "No forecast available" : shortForecast));
+        result.add("\n---");
         return String.join("",result);
     }
 }

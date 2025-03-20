@@ -106,12 +106,14 @@ public class WeatherService {
      */
     @Tool(description = "Get weather alerts for a US state")
     public List<Map<String,String>> getAlerts(@ToolParam(description = "Two-letter US state code (e.g. CA, NY") String state) {
-        // Returns active alerts including:
-        // - Event type
-        // - Affected area
-        // - Severity
-        // - Description
-        // - Safety instructions
+        /**
+         * Returns active alerts including:
+         * Event type
+         * Affected area
+         * Severity
+         * Description
+         * Safety instructions
+         */
         state = state.toUpperCase();
         AlertsResponse alertData = restClient.get().uri(String.format("/alerts/active?area=%s",state)).retrieve().body(AlertsResponse.class);
         if (alertData == null){
