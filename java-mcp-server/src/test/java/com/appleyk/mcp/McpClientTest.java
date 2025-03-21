@@ -4,9 +4,6 @@ import io.modelcontextprotocol.client.McpClient;
 import io.modelcontextprotocol.client.transport.ServerParameters;
 import io.modelcontextprotocol.client.transport.StdioClientTransport;
 import io.modelcontextprotocol.spec.McpSchema;
-import org.junit.jupiter.api.Tag;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 import java.util.Map;
@@ -17,9 +14,6 @@ import java.util.Map;
  * @date created on 2025/3/20:15:53
  * @description MCP 客户端测试 （使用stdio传输，MCP服务器由客户端自动启动，但前提是先构建本地的服务器jar）
  */
-@SpringBootTest
-@ActiveProfiles("integration-test")
-@Tag("integration")
 public class McpClientTest {
 
     public static void main(String[] args) {

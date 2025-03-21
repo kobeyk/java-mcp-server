@@ -1,6 +1,0 @@
-spring:
-  ai:
-    mcp:
-      client:
-        stdio:
-          servers-configuration: D:/AppData/Roaming/Claude/claude_desktop_config.json
