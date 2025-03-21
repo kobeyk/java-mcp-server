@@ -11,10 +11,11 @@ import org.springframework.context.annotation.Bean;
 public class McpServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(McpServerApplication.class, args);
+        System.out.println("Weather MCP-Server starting.....");
     }
 
     @Bean
     public ToolCallbackProvider weatherTools(WeatherService weatherService) {
-        return  MethodToolCallbackProvider.builder().toolObjects(weatherService).build();
+        return MethodToolCallbackProvider.builder().toolObjects(weatherService).build();
     }
 }
